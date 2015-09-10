@@ -7,7 +7,7 @@ public class Gust {
 
     JPanel gustInfo = new JPanel();
 
-    
+
 
 
 
