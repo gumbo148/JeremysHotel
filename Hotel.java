@@ -19,28 +19,25 @@ public class Hotel {
 //TODO: make search method to pick rooms
 
     public Room searchRooms(int roomNumber) {
-
+        boolean isInArray;
         for (Room search : roomArray) {
-            if (search.roomNumber == roomNumber) {
-
+            if (search.roomNumber == roomNumber)
                 return search;
-
-            }
-
         }
-
         return null;
     }
 
 
 
-    public void removeRoom(int roomNumber){
+    public Room removeRoom(int roomNumber){
 
+        roomArray.remove(searchRooms(roomNumber));
 
+        return null;
     }
 
-    public void availableRooms(){
-        //TODO: look through list and find open rooms
+    public ArrayList availableRooms(){
+
         ArrayList<Room> availableRoomList = new ArrayList<>();
         for (Room tempRoom: roomArray){
             tempRoom.availablity();
@@ -49,13 +46,20 @@ public class Hotel {
             }
 
         }
-        for (Room tempRooms : availableRoomList){
-            System.out.println(tempRooms.roomNumber +" "+ tempRooms.roomSize);
-        }
+        return availableRoomList;
     }
 
-    public void unavailableRooms(){
-        //TODO: find and list all occupied rooms
+    public ArrayList unavailableRooms(){
+
+        ArrayList<Room> availableRoomList = new ArrayList<>();
+        for (Room tempRoom: roomArray){
+            tempRoom.availablity();
+            if(tempRoom.available == false){
+                availableRoomList.add(tempRoom);
+            }
+
+        }
+        return availableRoomList;
 
     }
     public int totalRooms(){

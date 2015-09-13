@@ -15,6 +15,14 @@ public class Room extends Exception {
     public boolean available;
     //cost of room
 
+    public double getRoomPrice() {
+        return roomPrice;
+    }
+
+    public void setRoomPrice(double roomPrice) {
+        this.roomPrice = roomPrice;
+    }
+
     public double roomPrice;
 
 
@@ -53,32 +61,17 @@ public class Room extends Exception {
 
     public void setRoomSize(String size){
 
-        switch (size){
-            case "suit": roomSize = size;
-                break;
-            case "penthouse": roomSize = size;
-                break;
-            default: System.out.println("Wrong size");
-                break;
-
-        }
-
+        this.roomSize = size;
 
     }
 
 
-    public Room moveRooms(Room room){
+//    public Room moveRooms(Room room){
+//
+//        return room;
+//    }
 
-        return room;
-    }
 
-    public double priceRoom(double price){
-
-        roomPrice = price;
-
-        return roomPrice;
-
-    }
 
 
 }
