@@ -16,6 +16,7 @@ public class Guest {
     private int age;
     private int telephoneNumber;
     private int birthDate;
+    private CreditCard card;
 
 
 

@@ -4,7 +4,8 @@
 public class RateInfo {
 
 
-
+    private double totalCharge;
+    private double discount;
 
 
 
