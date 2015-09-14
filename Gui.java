@@ -100,7 +100,7 @@ public class Gui extends javax.swing.JPanel {
 
 
         jTextField6.addActionListener(this::jTextField6ActionPerformed);
-
+        jTextField8.addActionListener(this::jTextField8ActionPerformed);
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[]{"Male", "Female"}));
         jComboBox1.addActionListener(this::jComboBox1ActionPerformed);
 
@@ -119,7 +119,7 @@ public class Gui extends javax.swing.JPanel {
         jLabel11.setText("Phone");
 
 
-        jTextField8.addActionListener(this::jTextField8ActionPerformed);
+
 
         jLabel12.setText("Birth Date");
 
@@ -218,7 +218,7 @@ public class Gui extends javax.swing.JPanel {
                                                                                         .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                                                         .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                                                         .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                         .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                                                         .addGroup(layout.createSequentialGroup()
                                                                                                 .addComponent(jTextField10)
@@ -349,9 +349,28 @@ public class Gui extends javax.swing.JPanel {
     private void jButton1ActionPerformed(){
         mainHotel.guest.setFirstName(jTextField1.getText());
         mainHotel.guest.setLastName(jTextField2.getText());
+        mainHotel.guest.setAddress(jTextField3.getText());
+        mainHotel.guest.setCity(jTextField4.getText());
+        mainHotel.guest.setState(jTextField5.getText());
+        mainHotel.guest.setTelephoneNumber(Long.parseLong(jTextField8.getSelectedText()));
+        mainHotel.guest.setZip(Integer.parseInt(jTextField6.getText()));
+        mainHotel.guest.setGender((String) jComboBox1.getSelectedItem());
+        mainHotel.guest.setCountry((String) jComboBox2.getSelectedItem());
+        mainHotel.guest.setEmail(jTextField7.getText());
 
-        System.out.println(mainHotel.guest.getLastName() + mainHotel.guest.getFirstName());
-
+        mainHotel.guest.card.setCreditCardType((String) jComboBox3.getSelectedItem());
+        mainHotel.guest.card.setCardNumber(Integer.parseInt(jTextField10.getText()));
+        System.out.println(mainHotel.guest.getLastName()
+                + "\n" + mainHotel.guest.getFirstName()
+                + "\n" + mainHotel.guest.getAddress()
+                + "\n" + mainHotel.guest.getCity()
+                + "\n" + mainHotel.guest.getState()
+                + "\n" + mainHotel.guest.getZip()
+                + "\n" + mainHotel.guest.getGender()
+                + "\n" + mainHotel.guest.getCountry()
+                + "\n" + mainHotel.guest.getEmail()
+                + "\n");
+        System.out.println( mainHotel.guest.getTelephoneNumber());
     }
     private void jTextField3ActionPerformed(ActionEvent actionEvent) {
         mainHotel.guest.setAddress(jTextField3.getText());
@@ -370,24 +389,24 @@ public class Gui extends javax.swing.JPanel {
         mainHotel.guest.setZip(Integer.parseInt(jTextField6.getText()));
     }
 
-
+    private void jTextField8ActionPerformed(ActionEvent actionEvent) {
+        mainHotel.guest.setTelephoneNumber(Long.parseLong(jTextField8.getText()));
+    }
 
     private void jComboBox1ActionPerformed(ActionEvent actionEvent) {
-        mainHotel.guest.setGender((String)jComboBox1.getSelectedItem());
+        mainHotel.guest.setGender((String) jComboBox1.getSelectedItem());
 
     }
 
     private void jComboBox2ActionPerformed(ActionEvent actionEvent) {
-        mainHotel.guest.setCountry((String)jComboBox2.getSelectedItem());
+        mainHotel.guest.setCountry((String) jComboBox2.getSelectedItem());
     }
 
     private void jTextField7ActionPerformed(ActionEvent actionEvent) {
        mainHotel.guest.setEmail(jTextField7.getText());
     }
 
-    private void jTextField8ActionPerformed(ActionEvent actionEvent) {
-        mainHotel.guest.setTelephoneNumber(Integer.parseInt(jTextField8.getText()));
-    }
+
 
     private void jTextField9ActionPerformed(ActionEvent actionEvent) throws ParseException {
         DateFormat format = new SimpleDateFormat("MM/d/yy", Locale.ENGLISH);

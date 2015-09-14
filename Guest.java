@@ -17,10 +17,18 @@ public class Guest {
     private String address;
     private String state;
     private int age;
-    private int telephoneNumber;
+    private long telephoneNumber;
     private Date birthDate;
 
     CreditCard card = new CreditCard();
+
+    public long getTelephoneNumber() {
+        return telephoneNumber;
+    }
+
+    public void setTelephoneNumber(long telephoneNumber) {
+        this.telephoneNumber = telephoneNumber;
+    }
 
 
 
@@ -99,9 +107,7 @@ public class Guest {
         this.age = age;
     }
 
-    public void setTelephoneNumber(int telephoneNumber) {
-        this.telephoneNumber = telephoneNumber;
-    }
+
 
 
 
@@ -145,9 +151,7 @@ public class Guest {
         return address;
     }
 
-    public int getTelephoneNumber() {
-        return telephoneNumber;
-    }
+
 
     public String getOccupants() {
         return occupants;
