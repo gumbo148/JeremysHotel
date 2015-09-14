@@ -1,3 +1,5 @@
+import java.util.Date;
+
 /**
  * Created by Jeremy on 9/12/2015.
  */
@@ -13,10 +15,27 @@ public class Guest {
     private String country;
     private String email;
     private String address;
+    private String state;
     private int age;
     private int telephoneNumber;
-    private int birthDate;
-    private CreditCard card;
+    private Date birthDate;
+
+    CreditCard card = new CreditCard();
+
+
+
+
+
+
+    public int getZip() {
+        return zip;
+    }
+
+    public void setZip(int zip) {
+        this.zip = zip;
+    }
+
+    private int zip;
 
 
 
@@ -27,7 +46,12 @@ public class Guest {
 
 
    //setters
-    public void setBirthDate(int birthDate) {
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -82,10 +106,17 @@ public class Guest {
 
 
 //Getters
+    public String getState() {
+        return state;
+    }
+
     public String getLastName() {
         return lastName;
     }
 
+    public String getFirstName(){
+        return firstName;
+    }
     public int getAge() {
         return age;
     }
@@ -125,7 +156,7 @@ public class Guest {
     public String getRemarks() {
         return remarks;
     }
-    public int getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 

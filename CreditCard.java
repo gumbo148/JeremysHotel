@@ -5,117 +5,73 @@
 
 
 
-public class CreditCard  {
+public class CreditCard {
 
-    protected Long creditCardId;
-    protected String state;
-    protected String creditCardName;
-    protected String userName;
-    protected String email;
-    protected Long createTime;
-    protected String inputSource;
-    protected String referenceId;
-    protected Integer expirationMonth;
-    protected Integer expirationYear;
-    protected String lastFour;
+    private String creditCardType;
+    private String state;
+    private String cardAddress;
+    private Integer expirationMonth;
+    private Integer expirationYear;
+    private String lastFour;
 
-
-
-
-
-
-
-    public void setCreditCardId(Long creditCardId) {
-        this.creditCardId = creditCardId;
+    public int getCardNumber() {
+        return cardNumber;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public void setCardNumber(int cardNumber) {
+        this.cardNumber = cardNumber;
     }
 
-    public void setCreditCardName(String creditCardName) {
-        this.creditCardName = creditCardName;
-    }
+    private int cardNumber;
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setCreateTime(Long createTime) {
-        this.createTime = createTime;
-    }
-
-    public void setInputSource(String inputSource) {
-        this.inputSource = inputSource;
-    }
-
-    public void setReferenceId(String referenceId) {
-        this.referenceId = referenceId;
-    }
-
-    public void setExpirationMonth(Integer expirationMonth) {
-        this.expirationMonth = expirationMonth;
-    }
-
-    public void setExpirationYear(Integer expirationYear) {
-        this.expirationYear = expirationYear;
+    public String getLastFour() {
+        return lastFour;
     }
 
     public void setLastFour(String lastFour) {
         this.lastFour = lastFour;
     }
 
-
-    public CreditCard(Long creditCardId) {
-        this.creditCardId = creditCardId;
+    public String getCreditCardType() {
+        return creditCardType;
     }
 
-    public Long getCreditCardId() {
-        return creditCardId;
-    }
-
-    public String getCreditCardName() {
-        return creditCardName;
+    public void setCreditCardType(String creditCardType) {
+        this.creditCardType = creditCardType;
     }
 
     public String getState() {
         return state;
     }
 
-    public String getUserName() {
-        return userName;
+    public void setState(String state) {
+        this.state = state;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCardAddress() {
+        return cardAddress;
     }
 
-    public long getCreateTime() {
-        return createTime;
-    }
-
-    public String getInputSource() {
-        return inputSource;
-    }
-
-    public String getReferenceId() {
-        return referenceId;
+    public void setCardAddress(String cardAddress) {
+        this.cardAddress = cardAddress;
     }
 
     public Integer getExpirationMonth() {
         return expirationMonth;
     }
 
+    public void setExpirationMonth(Integer expirationMonth) {
+        this.expirationMonth = expirationMonth;
+    }
+
     public Integer getExpirationYear() {
         return expirationYear;
     }
 
-    public String getLastFour() {
-        return lastFour;
+    public void setExpirationYear(Integer expirationYear) {
+        this.expirationYear = expirationYear;
     }
+
+
 
 }

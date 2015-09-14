@@ -2,6 +2,10 @@ import java.util.ArrayList;
 public class Hotel {
     public ArrayList<Room> roomArray = new ArrayList<>();
     Guest guest = new Guest();
+
+
+
+
     //adds a room to the arraylist
     public void addRoom(int roomNumber, String size, double price){
         Room room = new Room(roomNumber);
